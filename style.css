@@ -959,42 +959,131 @@ footer span {
 }
 
 /* Responsive */
+/* ========================================
+   🆕 IMPROVED RESPONSIVE STYLES
+   ======================================== */
+
+/* 🆕 Hamburger Menu Styles */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: none;
+    padding: 0;
+    z-index: 101;
+    position: relative;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 2px;
+    background: var(--dusty);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* 🆕 Tablet Landscape (1024px and below) */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-avatar {
+        width: 320px;
+        height: 400px;
+        right: 5%;
+    }
+    
+    .hero-blob {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* 🆕 Tablet Portrait (900px and below) */
 @media (max-width: 900px) {
     nav {
         padding: 1.2rem 2rem;
     }
 
     section {
-        padding: 5rem 2rem;
+        padding: 4rem 2rem;
     }
 
     #hero {
         padding: 0 2rem;
+        min-height: 90vh;
     }
 
     .hero-content {
         max-width: 100%;
     }
 
+    /* 🆕 Hide avatar and blob on tablets */
     .hero-avatar,
     .hero-blob {
         display: none;
     }
 
+    /* 🆕 Adjust hero typography */
+    .hero-name {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
     #about {
         grid-template-columns: 1fr;
         gap: 3rem;
-        padding: 5rem 2rem;
+        padding: 4rem 2rem;
     }
 
-    .skills-grid,
-    .portfolio-grid,
+    /* 🆕 Make about card more compact */
+    .about-card {
+        padding: 2.5rem;
+    }
+
+    .about-card-inner {
+        font-size: 4rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
 
     #contact {
-        padding: 5rem 2rem;
+        padding: 4rem 2rem;
     }
 
     .form-row {
@@ -1005,5 +1094,203 @@ footer span {
         flex-direction: column;
         gap: 1.5rem;
         align-items: flex-start;
+    }
+}
+
+/* 🆕 Mobile Large (768px and below) */
+@media (max-width: 768px) {
+    /* 🆕 Show hamburger menu */
+    .nav-toggle {
+        display: flex;
+    }
+
+    nav {
+        padding: 1rem 1.5rem;
+    }
+
+    /* 🆕 Mobile menu styles */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background: var(--cream);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.4s ease;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    /* 🆕 Adjust section titles */
+    .section-title {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+    }
+
+    /* 🆕 Adjust hero CTAs */
+    .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* 🆕 Adjust stats grid */
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    /* 🆕 Smaller skill cards */
+    .skill-card {
+        padding: 1.8rem;
+    }
+
+    /* 🆕 Adjust contact form button */
+    .contact-form .btn-primary {
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+}
+
+/* 🆕 Mobile Small (480px and below) */
+@media (max-width: 480px) {
+    nav {
+        padding: 1rem;
+    }
+
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 3rem 1.5rem;
+    }
+
+    #hero {
+        padding: 0 1.5rem;
+        min-height: 80vh;
+        margin-top: 4rem;
+    }
+
+    .hero-name {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .hero-tag {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.8rem;
+    }
+
+    .hero-tagline {
+        font-size: 0.95rem;
+    }
+
+    /* 🆕 Adjust about card */
+    .about-card {
+        padding: 2rem;
+        border-radius: 30px 10px 30px 10px;
+    }
+
+    .about-card-inner {
+        font-size: 3rem;
+    }
+
+    /* 🆕 Smaller badges */
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.8rem;
+    }
+
+    /* 🆕 Adjust skill cards */
+    .skill-card {
+        padding: 1.5rem;
+    }
+
+    .skill-icon {
+        font-size: 2rem;
+    }
+
+    .skill-name {
+        font-size: 1.1rem;
+    }
+
+    /* 🆕 Adjust project cards */
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .project-info {
+        padding: 1rem;
+    }
+
+    /* 🆕 Smaller social links */
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    /* 🆕 Adjust contact section */
+    #contact {
+        padding: 3rem 1.5rem;
+    }
+
+    .contact-sub {
+        font-size: 0.95rem;
+    }
+
+    .form-input {
+        padding: 0.9rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* 🆕 Smaller footer text */
+    footer {
+        font-size: 0.75rem;
+        padding: 1.2rem;
+    }
+}
+
+/* 🆕 Mobile Extra Small (360px and below) */
+@media (max-width: 360px) {
+    .hero-name {
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        width: 80%;
+    }
+
+    section {
+        padding: 2.5rem 1rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+    }
+
+    .skill-card,
+    .project-card {
+        padding: 1.2rem;
     }
 }
