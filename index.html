@@ -1,282 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sakiba - Full Stack Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sakiba | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header class="header">
-        <div class="container">
-            <span class="logo">
-                <i class="fas fa-code"></i>
-                Sakiba
-            </span>
-            <nav class="nav">
-                <div class="nav-toggle" id="navToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#hero" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Petals -->
+<div id="petals"></div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-logo">Sakiba ✦</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#portfolio">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-blob"></div>
+  <div class="hero-avatar">
+    <div class="avatar-frame">
+      <img src="./image.png" alt="hero-img" width="500">
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag">✨ Available for Projects</div>
+    <h1 class="hero-name">
+      Hi, I'm <em>Sakiba</em><br/>
+      Full Stack <br/>Developer
+    </h1>
+    <p class="hero-tagline">
+      I craft beautiful digital experiences that are both aesthetically delightful and functionally powerful — turning ideas into elegant realities.
+    </p>
+    <div class="hero-cta">
+      <a href="#portfolio" class="btn-primary">View My Work →</a>
+      <a href="#contact" class="btn-outline">Say Hello 💌</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="about-visual reveal">
+    <div class="about-card">
+      <div class="about-card-inner">🌸</div>
+      <p style="text-align:center; color:var(--mid); font-style:italic; font-size:0.95rem; font-family:'Playfair Display',serif;">
+        "Design is where science and art break even."
+      </p>
+      <div class="about-stats">
+        <div class="stat-item">
+          <div class="stat-num">3</div>
+          <div class="stat-lbl">Projects Done</div>
         </div>
-    </header>
-
-    <main>
-        <section id="hero" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <div class="hero-greeting">
-                            <span class="wave">👋</span>
-                            <span>Hello, I'm</span>
-                        </div>
-                        <h1 class="hero-title">Sakiba</h1>
-                        <p class="hero-subtitle">Full Stack Developer</p>
-                        <p class="hero-description">
-                            Passionate about creating exceptional digital experiences through clean code and innovative solutions.
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="#projects" class="btn btn-primary">View My Work</a>
-                            <a href="#contact" class="btn btn-outline">Get In Touch</a>
-                        </div>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                    <div class="hero-image">
-                        <div class="image-wrapper">
-                            <img src="./image.png" alt="Sakiba - Full Stack Developer" class="profile-photo">
-                            <div class="image-decoration"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="scroll-arrow"></div>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I'm a passionate Full Stack Developer with expertise in modern web technologies. I love creating efficient, scalable solutions and bringing ideas to life through code.</p>
-                        <p>With a strong foundation in both frontend and backend development, I'm dedicated to continuous learning and staying up-to-date with the latest industry trends.</p>
-                        <div class="about-stats">
-                            <div class="stat">
-                                <span class="stat-number" data-target="50">0</span>
-                                <span class="stat-label">Projects Completed</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number" data-target="2">0</span>
-                                <span class="stat-label">Years Experience</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number" data-target="30">0</span>
-                                <span class="stat-label">Happy Clients</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2 class="section-title">My Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fab fa-html5"></i>
-                        </div>
-                        <h3>HTML5</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fab fa-css3-alt"></i>
-                        </div>
-                        <h3>CSS3</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fab fa-js"></i>
-                        </div>
-                        <h3>JavaScript</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fab fa-react"></i>
-                        </div>
-                        <h3>React JS</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="75%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <i class="fab fa-node-js"></i>
-                        </div>
-                        <h3>Node JS</h3>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="70%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/400x250" alt="Portfolio Website">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Portfolio Website</h3>
-                            <p>A responsive portfolio website built with React and Node.js, featuring modern design and smooth animations.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">CSS3</span>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/400x250" alt="E-commerce App">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>E-commerce Platform</h3>
-                            <p>Full-stack e-commerce solution with payment integration, admin dashboard, and real-time inventory management.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Express</span>
-                                <span class="tech-tag">MongoDB</span>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/400x250" alt="Task Management App">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Task Management System</h3>
-                            <p>Collaborative task management application with real-time updates, team collaboration features, and progress tracking.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Socket.io</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>Let's work together</h3>
-                        <p>I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your ideas to life.</p>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>patnisakiba@gmail.com</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>+91 99*******8</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>India</span>
-                            </div>
-                        </div>
-                    </div>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <span>Send Message</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Sakiba. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#hero">Back to Top</a>
-                </div>
-            </div>
+        <div class="stat-item">
+          <div class="stat-num">2+</div>
+          <div class="stat-lbl">Years Exp.</div>
         </div>
-    </footer>
+        <!-- <div class="stat-item">
+          <div class="stat-num">30+</div>
+          <div class="stat-lbl">Happy Clients</div>
+        </div> -->
+        <!-- <div class="stat-item">
+          <div class="stat-num">∞</div>
+          <div class="stat-lbl">Cups of Coffee ☕</div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <div class="about-text">
+    <div class="section-label reveal">About Me</div>
+    <h2 class="section-title reveal reveal-delay-1">
+      A creator who loves <em>beautiful</em> things
+    </h2>
+    <p class="reveal reveal-delay-2">
+      I'm Sakiba, Full Stack Developer I specialize in creating digital experiences that are not only visually beautiful but also deeply intuitive and user-centered.
+    </p>
+    <p class="reveal reveal-delay-2">
+      With a background in visual arts and computer science, I blend creativity with technical precision. I believe every pixel tells a story — and I love making sure it's a good one. 🌷
+    </p>
+    <div class="about-badges reveal reveal-delay-3">
+      <span class="badge">C</span>
+      <span class="badge">C++</span>
+      <span class="badge">HTML</span>
+      <span class="badge">CSS</span>
+      <span class="badge">JavaScript</span>
+      <span class="badge">PHP</span>
+      <span class="badge">Python</span>
+      <span class="badge">React Native</span>
+      <span class="badge">Figma</span>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- Skills -->
+<section id="skills">
+  <div class="skills-header">
+    <div class="section-label reveal" style="justify-content:center">What I Do</div>
+    <h2 class="section-title reveal reveal-delay-1" style="text-align:center">
+      My <em>Expertise</em>
+    </h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="skill-icon">🎨</div>
+      <div class="skill-name">UI Design</div>
+      <p class="skill-desc">Crafting pixel-perfect interfaces and seamless user experiences from wireframes to polished prototypes.</p>
+      <div class="skill-tags">
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">Prototyping</span>
+        <span class="skill-tag">User Research</span>
+      </div>
+    </div>
+    <div class="skill-card reveal reveal-delay-1">
+      <div class="skill-icon">💻</div>
+      <div class="skill-name">Web Development</div>
+      <p class="skill-desc">Building responsive, performant, and beautifully animated websites and web applications.</p>
+      <div class="skill-tags">
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">PHP</span>
+        <!-- <span class="skill-tag">React</span> -->
+      </div>
+    </div>
+    <!-- <div class="skill-card reveal reveal-delay-2">
+      <div class="skill-icon">✦</div>
+      <div class="skill-name">Brand Identity</div>
+      <p class="skill-desc">Creating cohesive visual identities — logos, palettes, typography — that tell your brand story.</p>
+      <div class="skill-tags">
+        <span class="skill-tag">Logo Design</span>
+        <span class="skill-tag">Style Guides</span>
+        <span class="skill-tag">Typography</span>
+      </div>
+    </div> -->
+    <div class="skill-card reveal">
+      <div class="skill-icon">📱</div>
+      <div class="skill-name">Mobile Design</div>
+      <p class="skill-desc">Designing beautiful native and cross-platform mobile experiences with a focus on touch interaction.</p>
+      <div class="skill-tags">
+        <span class="skill-tag">React Native</span>
+        <span class="skill-tag">Android</span>
+        <!-- <span class="skill-tag">Flutter</span> -->
+      </div>
+    </div>
+    <!-- <div class="skill-card reveal reveal-delay-1">
+      <div class="skill-icon">🖼️</div>
+      <div class="skill-name">Digital Illustration</div>
+      <p class="skill-desc">Hand-crafted illustrations and icons that give your brand a unique, human, and memorable touch.</p>
+      <div class="skill-tags">
+        <span class="skill-tag">Procreate</span>
+        <span class="skill-tag">Illustrator</span>
+        <span class="skill-tag">Icons</span>
+      </div>
+    </div> -->
+    <!-- <div class="skill-card reveal reveal-delay-2">
+      <div class="skill-icon">✉️</div>
+      <div class="skill-name">Email & Marketing</div>
+      <p class="skill-desc">Designing engaging email templates and landing pages that convert with style.</p>
+      <div class="skill-tags">
+        <span class="skill-tag">Mailchimp</span>
+        <span class="skill-tag">Campaigns</span>
+        <span class="skill-tag">A/B Testing</span>
+      </div>
+    </div> -->
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio">
+  <div class="portfolio-header">
+    <div>
+      <div class="section-label reveal">Selected Work</div>
+      <h2 class="section-title reveal reveal-delay-1">My <em>Projects</em></h2>
+    </div>
+    <!-- <div class="filter-tabs">
+      <button class="filter-tab active">All</button>
+      <button class="filter-tab">Design</button>
+      <button class="filter-tab">Dev</button>
+      <button class="filter-tab">Brand</button>
+    </div> -->
+  </div>
+  <div class="portfolio-grid">
+    <div class="project-card reveal">
+      <div class="project-info">
+        <div class="project-category">Gift Shop Website</div>
+        <div class="project-name">Giftos Internus</div>
+        <p class="project-desc">
+            A beautifully designed gift shop website featuring curated collections,
+            festive bundles, smooth shopping experience, and secure checkout.
+        </p>       
+        <a href="#" class="project-link">View  →</a>
+      </div>
+    </div>
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-info">
+        <div class="project-category">Flower Website</div>
+        <div class="project-name">Sakie & Co.</div>
+        <p class="project-desc">
+          A premium floral e-commerce platform with elegant layouts,
+          same-day delivery options, occasion-based collections,
+          and seamless checkout experience.
+        </p>
+        <a href="#" class="project-link">View →</a>
+      </div>
+    </div>
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-info">
+        <div class="project-category">Ice Cream Website</div>
+        <div class="project-name">Melt & Smile</div>
+        <p class="project-desc">
+          A vibrant ice cream brand website showcasing flavors,
+          seasonal specials, store locator integration, and
+          interactive menu animations.
+        </p>       
+        <a href="#" class="project-link">View →</a>
+      </div>
+    </div>
+    <!-- <div class="project-card reveal">
+      <div class="project-img" style="background: linear-gradient(135deg,#F4E5C5,#F9EDE3)">
+        <span>☕</span>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Brand Identity</div>
+        <div class="project-name">Maison Café — Branding</div>
+        <p class="project-desc">Complete brand identity for a Parisian café, including logo, packaging, and digital presence.</p>
+        <a href="#" class="project-link">View Case Study →</a>
+      </div>
+    </div>
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-img" style="background: linear-gradient(135deg,#EDD5F4,#D5C5F4)">
+        <span>🌙</span>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Mobile App</div>
+        <div class="project-name">Luna — Sleep Tracker</div>
+        <p class="project-desc">A soothing sleep tracking app with ambient soundscapes and beautiful nightly insights.</p>
+        <a href="#" class="project-link">View Case Study →</a>
+      </div>
+    </div>
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-img" style="background: linear-gradient(135deg,#F4C5D5,#F4D5C5)">
+        <span>🎨</span>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Portfolio Website</div>
+        <div class="project-name">Aria — Artist Portfolio</div>
+        <p class="project-desc">A custom portfolio website for a digital illustrator, featuring a gallery with smooth transitions.</p>
+        <a href="#" class="project-link">View Case Study →</a>
+      </div>
+    </div> -->
+  </div>
+</section>
+
+<!-- Testimonials -->
+<!-- <section id="testimonials">
+  <div class="testimonials-header">
+    <div class="section-label reveal" style="justify-content:center">Kind Words</div>
+    <h2 class="section-title reveal reveal-delay-1" style="text-align:center">What Clients <em>Say</em></h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <span class="quote-mark">"</span>
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">Sakiba transformed our clunky product into something genuinely beautiful. She has this rare ability to understand both the user and the brand simultaneously.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👩‍💼</div>
+        <div>
+          <div class="author-name">Claire Dupont</div>
+          <div class="author-role">CEO, Bloom Wellness</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-1">
+      <span class="quote-mark">"</span>
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">Working with Sakiba felt effortless. She delivered every milestone ahead of schedule, and the final result exceeded all our expectations. Highly recommend!</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👨‍💻</div>
+        <div>
+          <div class="author-name">Marcus Chen</div>
+          <div class="author-role">Product Lead, Verdant</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <span class="quote-mark">"</span>
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">The brand identity Sakiba created for Maison is pure perfection. Every detail reflects exactly who we are — and our customers noticed immediately.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👩‍🍳</div>
+        <div>
+          <div class="author-name">Isabelle Martin</div>
+          <div class="author-role">Owner, Maison Café</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Contact -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="section-label">Let's Connect</div>
+    <h2 class="section-title">Ready to create something <em>beautiful</em>?</h2>
+    <p class="contact-sub">I'm currently accepting new projects. If you have a vision you'd like to bring to life, I'd love to hear from you. ✨</p>
+    <div class="contact-form">
+      <div class="form-row">
+        <input type="text" class="form-input" placeholder="Your Name" />
+        <input type="email" class="form-input" placeholder="Your Email" />
+      </div>
+      <input type="text" class="form-input" placeholder="Project Type" />
+      <textarea class="form-input" placeholder="Tell me about your project... 🌸"></textarea>
+      <button class="btn-primary" style="align-self:center; padding:1rem 3rem; border:none; cursor:none; font-size:0.95rem;">
+        Send Message 💌
+      </button>
+    </div>
+    <div class="contact-socials">
+      <a class="social-link" href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <!-- <a class="social-link" href="#" title="Dribbble">🏀</a> -->
+      <a class="social-link" href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a class="social-link" href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Made with <span>♥</span> by Sakiba · 2026 · All rights reserved</p>
+</footer>
+<script src="./script.js"></script>
 </body>
-
 </html>
